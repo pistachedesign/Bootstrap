@@ -7,8 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="x-ua-compatible" content="ie-edge">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 
 	
 
@@ -26,9 +25,91 @@
 				<a href="https://www.instagram.com" target="_blank"><img src="img/logo_instagram.png" alt="logo instagram" width="30" height="30"/></a>
 			</div>
 			<div class="col-10 pt-2 pr-5 pl-5" id="user-panel">
-				<button type="button" href="login.html" class="btn btn-sm btn-outline-info float-right ml-2">LOG IN</button>
-				<button type="button" href="register.html" class="btn btn-sm btn-dark float-right">REGISTER</button>
+				<button type="button" class="btn btn-sm btn-outline-info float-right ml-2" data-toggle="modal" data-target="#modal-login">LOGIN</button>
+				<div class="modal fade" id="modal-login">
+					<div class="modal-dialog">
+						<div class="modal-content">
+
+							<!--  CABECERA  -->
+							<div class="modal-header">
+								<h4 class="modal-title">LOG IN</h4>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<!--  CUERPO  -->
+							<div class="modal-body">
+								<form class="form-signin">
+									<div class="text-center mb-4">
+										<h1 class="h3 mb-3 font-weight-normal">Welcome Vook</h1>
+									</div>
+									<div class="form-label-group pb-2">
+										<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+									</div>
+									<div class="form-label-group pb-2">
+										<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+									</div>
+									<div class="checkbox mb-3">
+										<label><input type="checkbox" value="remember me"> Remember me</label>
+										<button class="btn btn-lg btn-info btn-block mt-2 mb-2" type="submit">Sign in</button>
+									</div>
+								</form>
+							</div>
+							<!--  PIE DE MODAL  -->
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-lg btn-warning btn-block mt-2 mb-2" data-dismiss="modal">Forgot password</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn btn-sm btn-dark float-right" data-toggle="modal" data-target="#modal-register">REGISTER</button>
+				<div class="modal fade" id="modal-register">
+					<div class="modal-dialog">
+						<div class="modal-content">
+
+							<!--  CABECERA  -->
+							<div class="modal-header">
+								<h4 class="modal-title">REGISTER</h4>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<!--  CUERPO  -->
+							<div class="modal-body">
+								<form class="form-signin">
+									<div class="text-center mb-4">
+										<h1 class="h3 mb-3 font-weight-normal">Create Account</h1>
+									</div>
+									<div class="form-label-group pb-2">
+										<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+									</div>
+									<div class="form-label-group pb-2">
+										<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+									</div>
+									<div class="form-label-group pb-2">
+										<input type="password" id="inputPasswordConfirm" class="form-control" placeholder="Confirm Password" required>
+									</div>
+									<div class="form-label-group pb-2">
+										<input type="password" id="userName" class="form-control" placeholder="Name" required>
+									</div>
+									<div class="checkbox mb-3">
+										<label><input type="checkbox" value="remember me"> Email me about upcoming deals!</label>
+										<button class="btn btn-lg btn-info btn-block mt-2 mb-2" type="submit">Create Account</button>
+										<p>
+										By identifying you accept our <a href="#">Terms of use and sale.</a> See our <a href="#">Privacy Notice</a>, our <a href="#">Cookie Notice</a> and our <a href="#">Notice on advertising based on the interests of the user.</a></p>
+									</div>
+								</form>
+							</div>
+
+							<!--  PIE DE MODAL  -->
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-lg btn-white btn-outline-info btn-block mt-2 mb-2" data-dismiss="modal">Already have an account? Log in</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
 			</div>
+
 		</div>
 		<div class="row">
 			<div class="col-2 pt-2 pb-2" id="vook_logo">
@@ -45,25 +126,24 @@
 	<div class="container bg-info rounded-sm" id="menu_vook">
 		<div class="row">
 			<div class="col">
-				<nav class="navbar navbar-expand-md navbar-dark mb-1">
-
+				<nav class="navbar navbar-expand-md navbar-dark mb-2">
 
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#home">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 
 					<div class="collapse navbar-collapse" id="home">
-						<ul class="navbar-nav pt-2 pr-5 pl-5">
+						<ul class="navbar-nav pt-2 pr-5 pl-5 mr-auto">
 							<li class="nav-item pr-5"><a href="index.html" class="nav-link text-white">HOME</a></li>
 							<li class="nav-item pr-5"><a href="about.html" class="nav-link text-white">ABOUT</a></li>
 							<li class="nav-item pr-5"><a href="contact.html" class="nav-link text-white">CONTACT</a></li>
-							<div class="input-group mb-1 pt-1 pr-5 pl-5">
-								<input type="text" class="form-control mt-2" placeholder="Search">
-								<div class="input-group-append ml-1 mt-2">
-									<button class="btn btn-outline-info bg-white" type="submit">Go</button>
-								</div>
-							</div>
 						</ul>
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 input-group mb-1 pt-2 float-right">
+							<input type="text" class="form-control mt-2" placeholder="Search">
+							<div class="input-group-append ml-1 mt-2">
+								<button class="btn btn-outline-info bg-white" type="submit">Go</button>
+							</div>
+						</div>
 					</div>
 				</nav>
 			</div>
@@ -77,7 +157,7 @@
 	<div class="container mt-2 mb-5" id="vook_selection">
 		<div class="row">
 			<div class="col pt-5">
-				<h1 class="text-center">VOOK <span class="glyphicon glyphicon-book text-info"></span> ABOUT</span></a></h1>
+				<h1 class="text-center">VOOK <i class='fas fa-book-reader text-info'></i> ABOUT</a></h1>
 
 				<!--Carousel Wrapper-->
 				<div id="multi-item-example" class="carousel slide carousel-multi-item mt-5" data-ride="carousel">
@@ -236,105 +316,7 @@
 
 	<!------------------------------- VOOK FILTER ------------------------------->
 
-	<div class="container bg-info mt-2 pb-5 pr-1 pl-1" id="vook_filter_gallery">
-		<div class="row">
-			<div class="col pt-5">
-				<h1 class="text-center text-white"> VOOK <span class="glyphicon glyphicon-th-list text-warning"></span> FILTER SECTION</h1>
-				<div class="container-fluid mt-5" id="filter-selector">
-					<div class="col-md-4 justify-content-left mt-5 float-left">
-						<div class="card">
-							<article class="filter-group">
-								<header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapse_aside1" data-abc="true" aria-expanded="false" class="collapsed"> <i class="icon-control fa fa-chevron-down"></i>
-									<h6 class="title">Categories </h6>
-								</a> </header>
-								<div class="filter-content collapse" id="collapse_aside1" style="">
-									<div class="card-body">
-										<ul class="list-menu">
-											<li><a href="#" data-abc="true">Classic </a></li>
-											<li><a href="#" data-abc="true">Design </a></li>
-											<li><a href="#" data-abc="true">Fiction </a></li>
-											<li><a href="#" data-abc="true">Thrillers </a></li>
-											<li><a href="#" data-abc="true">Romance </a></li>
-										</ul>
-									</div>
-								</div>
-							</article>
-							<article class="filter-group">
-								<header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapse_aside2" data-abc="true" aria-expanded="false" class="collapsed"> <i class="icon-control fa fa-chevron-down"></i>
-									<h6 class="title">Author </h6>
-								</a> </header>
-								<div class="filter-content collapse" id="collapse_aside2" style="">
-									<div class="card-body">
-										<ul class="list-menu">
-											<li><a href="#" data-abc="true">Garth Williams </a></li>
-											<li><a href="#" data-abc="true">William Shakespeare </a></li>
-											<li><a href="#" data-abc="true">Marlo Morgan </a></li>
-											<li><a href="#" data-abc="true">Yann Martel </a></li>
-											<li><a href="#" data-abc="true">Robert Louis Stevenson </a></li>
-										</ul>
-									</div>
-								</div>
-							</article>
-						</div>
-						
-					</div>
-					<div class="col-md-4 d-md-flex">
-						<div class="card mb-2">
-							<iframe src="https://player.vimeo.com/video/37660220" frameborder="0" allow="autoplay; fullscreen" allowfullscreen class="responsive"></iframe>
-							<div class="card-body bg-outline-info">
-								<h4 class="card-title">Vook 10</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<button type="button" href="#" class="btn btn-dark">DETAIL</button>
-							</div>		
-						</div>
-					</div>
-					<div class="col-md-4 d-md-block">
-						<div class="card mb-2">
-							<iframe src="https://player.vimeo.com/video/37660220" frameborder="0" allow="autoplay; fullscreen" allowfullscreen class="responsive"></iframe>
-							<div class="card-body bg-outline-info">
-								<h4 class="card-title">Vook 11</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<button type="button" href="#" class="btn btn-dark">DETAIL</button>
-							</div>		
-						</div>
-					</div>
-					<div class="col-md-4 d-md-block">
-						<div class="card mb-2">
-							<iframe src="https://player.vimeo.com/video/37660220" frameborder="0" allow="autoplay; fullscreen" allowfullscreen class="responsive"></iframe>
-							<div class="card-body bg-outline-info">
-								<h4 class="card-title">Vook 12</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<button type="button" href="#" class="btn btn-dark">DETAIL</button>
-							</div>		
-						</div>
-					</div>
-					<div class="col-md-4 d-md-block">
-						<div class="card mb-2">
-							<iframe src="https://player.vimeo.com/video/37660220" frameborder="0" allow="autoplay; fullscreen" allowfullscreen class="responsive"></iframe>
-							<div class="card-body bg-outline-info">
-								<h4 class="card-title">Vook 13</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<button type="button" href="#" class="btn btn-dark">DETAIL</button>
-							</div>		
-						</div>
-					</div>
-					<div class="col-md-4 d-md-block">
-						<div class="card mb-2">
-							<iframe src="https://player.vimeo.com/video/37660220" frameborder="0" allow="autoplay; fullscreen" allowfullscreen class="responsive"></iframe>
-							<div class="card-body bg-outline-info">
-								<h4 class="card-title">Vook 14</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<button type="button" href="#" class="btn btn-dark">DETAIL</button>
-							</div>		
-						</div>
-					</div>
-				</div>
-
-				
-				
-			</div>
-		</div>
-	</div>
+	
 
 
 	<!------------------------------- FOOTER ------------------------------->
